@@ -24,7 +24,7 @@ function addTaskRow (taskKey, task) {
 function createTask () {
   let text = taskText.value || ''
   if (!text.trim().length) return
-  createTask({
+  createTaskInDatabase({
     text: text,
     complete: false
   })

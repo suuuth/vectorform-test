@@ -12,7 +12,7 @@ firebase.auth().signInAnonymously()
 
 
 // CREATE a new task in Firebase
-function createTask (task) {
+function createTaskInDatabase (task) {
   firebase.database().ref('tasks').push(task)
 }
 
