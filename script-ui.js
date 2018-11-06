@@ -96,7 +96,10 @@ function toggleInActiveTasks () {
   }
 }
 
-addTaskBtn.addEventListener('click', createTask)
 document.getElementById('delete-all-tasks').addEventListener('click', deleteAllTasks)
 document.getElementById('toggleActive').addEventListener('click', toggleActiveTasks)
 document.getElementById('toggleComplete').addEventListener('click', toggleInActiveTasks)
+addTaskBtn.addEventListener('click', createTask)
+taskText.addEventListener('keypress', function (event) {
+  if (event.keyCode === 13) createTask()
+})
