@@ -43,7 +43,8 @@ function updateTaskRow (taskKey) {
   let task = document.getElementById(taskKey)
 
   task.classList.add(task.complete)
-  task.querySelector('btn-update').add(task.complete)
+  task.querySelector('btn-update').classList.add(task.complete)
+  clone.querySelector('.btn-update.danger').classList.add(task.complete)
 }
 
 // Remove a task from the page
