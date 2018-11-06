@@ -68,7 +68,7 @@ function deleteTask () {
 }
 
 function deleteAllTasks () {
-  deleteAllTasksFromDatabase ()
+  deleteAllTasksFromDatabase()
 }
 
 function updateCount () {

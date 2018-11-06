@@ -10,7 +10,6 @@ var config = {
 firebase.initializeApp(config)
 firebase.auth().signInAnonymously()
 
-
 // CREATE a new task in Firebase
 function createTaskInDatabase (task) {
   firebase.database().ref('tasks').push(task)
@@ -43,21 +42,20 @@ function getTasks () {
 
 // UPDATE task in Firebase
 function updateTaskInDatabase (taskKey, complete) {
-  firebase.database().ref('tasks/'+taskKey+'/complete/').set('' + complete)
+  firebase.database().ref('tasks/' + taskKey + '/complete/').set('' + complete)
 }
 
 // DELETE task from Firebase
 function deleteTaskFromDatabase (taskKey) {
-  firebase.database().ref('tasks/'+taskKey+'').remove()
-  updateCount ()
+  firebase.database().ref('tasks/' + taskKey + '').remove()
+  updateCount()
 }
 
 // DELETE tasks list from Firebase
 function deleteAllTasksFromDatabase () {
   firebase.database().ref('tasks').remove()
-  updateCount ()
+  updateCount()
 }
 
 // Load all data
 getTasks()
-
