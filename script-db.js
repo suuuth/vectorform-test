@@ -44,7 +44,6 @@ function getTasks () {
 // UPDATE task in Firebase
 function updateTaskInDatabase (taskKey, complete) {
   firebase.database().ref('tasks/'+taskKey+'/complete/').set('' + complete)
-  window.location.reload()
 }
 
 // DELETE task from Firebase

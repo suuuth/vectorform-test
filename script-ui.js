@@ -39,12 +39,18 @@ function updateTask (event) {
 }
 
 // Update the status of task on page
-function updateTaskRow (taskKey) {
-  let task = document.getElementById(taskKey)
+function updateTaskRow (taskKey, task) {
+  let taskRow = document.getElementById(taskKey)
 
-  task.classList.add(task.complete)
-  task.querySelector('btn-update').classList.add(task.complete)
-  task.querySelector('.btn-update.danger').classList.add(task.complete)
+  if (task.complete == 'true') {
+    taskRow.classList.replace('false', task.complete)
+    taskRow.querySelector('.btn-update').classList.replace('false', task.complete)
+    taskRow.querySelector('.btn-update.danger').classList.replace('false', task.complete)
+  } else {
+    taskRow.classList.replace('true', task.complete)
+    taskRow.querySelector('.btn-update').classList.replace('true', task.complete)
+    taskRow.querySelector('.btn-update.danger').classList.replace('true', task.complete)
+  }
 }
 
 // Remove a task from the page
