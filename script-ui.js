@@ -51,6 +51,8 @@ function updateTaskRow (taskKey, task) {
     taskRow.querySelector('.btn-update').classList.replace('true', task.complete)
     taskRow.querySelector('.btn-update.danger').classList.replace('true', task.complete)
   }
+
+  updateCount ()
 }
 
 // Remove a task from the page
