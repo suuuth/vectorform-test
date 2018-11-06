@@ -1,0 +1,23 @@
+{
+  "name": "VectorForm-Test-Kevin-Sutherland",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:server": "live-server",
+    "dev:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true --watch",
+    "dev": "run-s dev:*",
+    "build:stylelint": "stylelint 'public/styles/source/scss/*.scss'",
+    "build:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
+    "build:html": "htmlhint *.html",
+    "build:js": "standard *.js",
+    "build": "run-s build:*"
+  },
+  "devDependencies": {
+    "htmlhint": "^0.9.13",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2",
+    "standard": "^11.0.1",
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}

@@ -1,0 +1,46 @@
+<!-- Author: Kevin Sutherland -->
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="public/styles/compiled/css/style.css">
+  <title>VectorForm Test - Kevin Sutherland</title>
+</head>
+<body>
+
+  <h1>To-do List</h1>
+
+  <div class="new-task mb-l">
+    <input id="task-text-js" type="text" name="taskText" placeholder="add a new task here">
+    <button class="add-task" id="add-task-js">Add Task</button>
+  </div>
+
+  <div class="task-count mb-l">
+    <p class="mb-s">You have <span id="taskCount"></span> incomplete tasks!</p>
+    <div>
+      <button id="toggleActive">Toggle Active Tasks</button>
+      <button id="toggleComplete">Toggle Complete Tasks</button>
+    </div>
+  </div>
+
+  <h4 class="mb-s">To-Do:</h4>
+  <ul class="todo mb-l" id="todo"></ul>
+  <button class="remove-all danger" id="delete-all-tasks">Remove All Tasks?</button>
+
+  <template id="task-template">
+    <li class="task mb-xs">
+      <span class="text">task</span>
+      <div class="buttons">
+        <button class="btn-update" type="button">Mark Done</button>
+        <button class="btn-update danger false" type="button">Mark Incomplete</button>
+        <button class="btn-delete danger">Remove Task</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script type="text/javascript" src="script-ui.js"></script>
+  <script type="text/javascript" src="script-db.js"></script>
+</body>
+</html>
