@@ -18,6 +18,7 @@ function addTaskRow (taskKey, task) {
 
   tasks.insertBefore(clone, tasks.firstChild)
   taskText.value = ''
+
   updateCount()
 }
 
